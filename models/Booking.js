@@ -24,6 +24,13 @@ const bookingSchema = new mongoose.Schema({
     roseName: { type: String },
     rosePrice: { type: Number },
   }],
+  addoneeffects: [
+    {
+      addoneName: { type: String },
+      addonePrice: { type: Number },
+      addoneQuantity: { type: Number, default: 1 },
+    },
+  ],
 });
 
 module.exports = mongoose.model('Booking', bookingSchema);

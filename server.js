@@ -11,6 +11,7 @@ const decorationRoutes = require('./routes/decorationRoutes');
 const roseRoutes = require('./routes/roseRoutes');
 const selectedRoseRoutes = require('./routes/selectedRoseRoutes');
 const selectedDecorationRoutes = require('./routes/selectedDecorationRoutes')
+const addoneRoutes = require('./routes/AddoneRoutes');
 // const selectedCakeRoutes = require('./routes/selectedCakeRoutes');
 const app = express();
 app.use(express.json());
@@ -39,6 +40,7 @@ app.use('/api/decorations', decorationRoutes);
 app.use('/api/roses', roseRoutes);
 app.use('/api/selectedRose', selectedRoseRoutes);
 app.use('/api/selectedDecor', selectedDecorationRoutes);
+app.use('/api/addone', addoneRoutes);
 app.use('/' , (req,res)=>{
   res.send("<h1> welcome to partymowa </h1>")
 })
